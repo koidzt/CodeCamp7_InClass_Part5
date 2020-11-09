@@ -1,0 +1,13 @@
+Day41
+สร้าง fontend ให้ fb-cc7
+create-react-app fontend-fb-cc7 //สร้าง react-app
+npm i axios antd react-router-dom jwt-decode //ติดตั้งเครื่องมือที่ต้องใช้
+
+folder> backend-fb-cc7
+npm i express-fileupload //ติดตั้งเครื่องมือสำหรับการอัพโหลดไฟล์
+หน้า backend-fb-cc7/index.js ประกาศเรียกเครื่องมือ const fileUpload = require("express-fileupload"); 
+หน้า backend-fb-cc7/index.js ใส่คำสั่งเพื่อใช่งาน app.use(fileUpload()); //ต้องใส่ก่อน path ไม่งั้นไปอัพโหลดในหน้าเว็บจะหาไม่เจอ เป็นตัวที่ทำให้ใช้ form-data ได้ (มีใน postman)
+
+//ดึงไฟล์ git ที่เคย clone มาแล้วมาอัพเดตให้ตรงกับของ origin/master
+git fetch 
+git reset --hard origin/master
